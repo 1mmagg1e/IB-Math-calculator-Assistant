@@ -1,0 +1,110 @@
+app:
+  description: 'Guide for using Ti84 Calculator for IB Math AA SL '
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: chat
+  name: IB MATH AA SL Ti84 Guide
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/gemini:0.7.20@de0063a630a6d1b2c025fb84f3462ba5151fb60618309cd595c3f4711b1df847
+    version: null
+kind: app
+model_config:
+  agent_mode:
+    enabled: false
+    max_iteration: 10
+    strategy: function_call
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config:
+    prompt:
+    - role: system
+      text: ''
+  completion_prompt_config:
+    conversation_histories_role:
+      assistant_prefix: ''
+      user_prefix: ''
+    prompt:
+      text: ''
+  dataset_configs:
+    datasets:
+      datasets:
+      - dataset:
+          enabled: true
+          id: af0e9f35-6f08-4f55-8e29-5ee17539d4ef
+    reranking_enable: false
+    reranking_mode: weighted_score
+    reranking_model:
+      reranking_model_name: ''
+      reranking_provider_name: ''
+    retrieval_model: multiple
+    top_k: 4
+    weights:
+      keyword_setting:
+        keyword_weight: 0.3
+      vector_setting:
+        embedding_model_name: gemini-embedding-2-preview
+        embedding_provider_name: langgenius/gemini/google
+        vector_weight: 0.7
+      weight_type: customized
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    - .MP4
+    - .MOV
+    - .MPEG
+    - .WEBM
+    allowed_file_types: []
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+    mode: chat
+    name: gemini-3.1-flash-lite-preview
+    provider: langgenius/gemini/google
+  more_like_this:
+    enabled: false
+  opening_statement: ''
+  pre_prompt: "Role: 你是一个专门帮助 IB Math AA SL 学生的计算器专家。\nTask: 当学生询问如何使用 TI-84 计算器解决特定数学问题时，请严格根据【上下文】中的步骤进行回答。\
+    \ \nStyle:\n语言要简洁、友好。\n必须以“第一步、第二步...”的列表形式展示按键流程。\n如果知识库里没有提到的操作，请礼貌地回答：“抱歉，我的手册里暂时还没有这个考点的按键步骤，建议查阅官方说明书。”（绝对不要胡编乱造按键顺序！）\n"
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    config: {}
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form: []
+version: 0.6.0
