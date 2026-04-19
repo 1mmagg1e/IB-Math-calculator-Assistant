@@ -1,0 +1,150 @@
+app:
+  description: 'Guide for using Ti84 Calculator for IB Math AA SL '
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: chat
+  name: IB MATH AA SL Ti84 Guide
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/gemini:0.7.20@de0063a630a6d1b2c025fb84f3462ba5151fb60618309cd595c3f4711b1df847
+    version: null
+kind: app
+model_config:
+  agent_mode:
+    enabled: false
+    max_iteration: 10
+    strategy: function_call
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config:
+    prompt:
+    - role: system
+      text: ''
+  completion_prompt_config:
+    conversation_histories_role:
+      assistant_prefix: ''
+      user_prefix: ''
+    prompt:
+      text: ''
+  dataset_configs:
+    datasets:
+      datasets:
+      - dataset:
+          enabled: true
+          id: af0e9f35-6f08-4f55-8e29-5ee17539d4ef
+    reranking_enable: false
+    reranking_mode: weighted_score
+    reranking_model:
+      reranking_model_name: ''
+      reranking_provider_name: ''
+    retrieval_model: multiple
+    top_k: 4
+    weights:
+      keyword_setting:
+        keyword_weight: 0.3
+      vector_setting:
+        embedding_model_name: gemini-embedding-2-preview
+        embedding_provider_name: langgenius/gemini/google
+        vector_weight: 0.7
+      weight_type: customized
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    - .MP4
+    - .MOV
+    - .MPEG
+    - .WEBM
+    allowed_file_types: []
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+    mode: chat
+    name: gemini-2.5-flash-lite
+    provider: langgenius/gemini/google
+  more_like_this:
+    enabled: false
+  opening_statement: ''
+  pre_prompt: 'Role: 你是一个极其专业的 IB Math AA SL 助教。
+
+    Logic: 当学生输入问题时，请遵循以下“三步破题法”：
+
+    识别参数 (Identify)：从题目中提取关键数值（如 n, p, mu, sigma 等）。
+
+    锁定功能 (Identify function should be used in calculator)：根据知识库，判定该用哪个计算器功能。
+
+    按键向导 (Execute)：给出精确的 TI-84 按键步骤，并特别提醒易错点。
+
+    视觉辅助指令 (Visual Aid Protocol):
+
+    自动提取：当你在知识库中检索到的片段包含 Markdown 格式的图片（例如 ![描述](链接)）时，请务备将其完整保留并展示在回答中。
+
+    展示位置：图片必须紧跟在“第三步：按键向导 (Execute)”的具体步骤之后。
+
+    作用说明：在展示图片前，可以用一句话引导，例如：“你可以参考下方的计算器屏幕截图来核对你的输入设置：”
+
+    禁止过滤：绝对不要忽略或删除知识库中的图片代码，这些视觉信息对于学生核对 TI-84 界面至关重要。
+
+
+    Style (强制执行):
+
+    语言简洁、友好。
+
+    必须以“第一步、第二步...”的列表形式展示按键流程。
+
+    变量格式禁令（重要）：禁止使用任何 LaTeX 或数学公式符号格式。绝对不要使用美元符号（$）来包裹变量。所有的数学变量（如 n, p, x, mu, sigma）必须直接以普通纯文本形式书写。
+
+    错误写法：$n$ 或 n
+
+    正确写法：n
+
+    数学符号格式：在使用数学符号格式的时候，禁止使用例如："=<" 这种来表示小于等于，“^"来表示平方，还是需要使用标准的数学符号格式。例如：
+
+    小于等于：必须写成 ≤
+
+    大于等于：必须写成 ≥
+
+    计算器步骤格式：在提到任何计算器的步骤的时候，请将所有的按键用code方式展示出来，这样可以更显眼一点
+
+    如果知识库里没有提到的操作，请礼貌回答：“抱歉，我的手册里暂时还没有这个考点的按键步骤，建议查阅官方说明书。”'
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    config: {}
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form: []
+version: 0.6.0
